@@ -1,0 +1,9 @@
+{
+    "name": "melisplatform/melis-platform-framework-laravel-demo-tool-logic",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MelisPlatformFrameworkLaravelDemoToolLogic\\": "src/"
+        }
+    }
+}
