@@ -15,8 +15,8 @@
     "module"
   ],
   "require": {
-    "melisplatform/melis-platform-framework-laravel": "dev-master",
-    "melisplatform/melis-platform-framework-laravel-demo-tool": "dev-master"
+    "melisplatform/melis-platform-framework-laravel": "*",
+    "melisplatform/melis-platform-framework-laravel-demo-tool": "*"
   },
   "autoload": {
     "psr-4": {
