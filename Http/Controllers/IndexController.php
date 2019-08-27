@@ -9,28 +9,23 @@ use Illuminate\Support\Facades\DB;
 class IndexController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing
+     * This is an example retrieving data from database
+     * using Laravel database query builder and Zend service manager
      * @return Response
      */
-    public function list1()
+    public function list()
     {
-        $melisUsers = $users = DB::table('melis_core_user')->get();
-        $melisLogs = $users = DB::table('melis_core_log')->get();
+        /**
+         * Fetching datas from Database using Laravel database query builder
+         */
+        $albums = $users = DB::table('melis_demo_album')->get();
 
-        return view('melisplatformframeworklaraveldemotoollogic::list1', ['users' => $melisUsers, 'logs' => $melisLogs]);
-    }
+        /**
+         * And this retrieving datas using Zend service manager
+         */
+        $languages = app('ZendServiceManager')->get('MelisCoreTableLang')->fetchAll();
 
-    /**
-     * Display a listing of the resource.
-     * @return Response
-     */
-    public function list2()
-    {
-        $sl = app('ZendServiceManager');
-
-        $melisUsers = $sl->get('MelisCoreTableUser')->fetchAll()->toArray();
-        $melisLogs = $sl->get('MelisCoreLogService')->getLogList();
-
-        return view('melisplatformframeworklaraveldemotoollogic::list2', ['users' => $melisUsers, 'logs' => $melisLogs]);
+        return view('melisplatformframeworklaraveldemotoollogic::list', ['albums' => $albums, 'langs' => $languages]);
     }
 }

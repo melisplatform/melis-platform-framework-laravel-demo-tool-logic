@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/list-1', 'IndexController@list1');
-
-Route::get('/list-2', 'IndexController@list2');
+Route::get('/list', 'IndexController@list');
