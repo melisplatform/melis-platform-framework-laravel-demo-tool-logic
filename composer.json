@@ -15,7 +15,6 @@
     "module"
   ],
   "extra": {
-    "module-name": "MelisPlatformFrameworkLaravelDemoToolLogic",
     "dbdeploy": true
   },
   "require": {
