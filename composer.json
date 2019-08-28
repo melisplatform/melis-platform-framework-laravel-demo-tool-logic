@@ -14,20 +14,6 @@
     "zf2",
     "module"
   ],
-  "require": {
-    "melisplatform/melis-platform-framework-laravel": "*",
-    "melisplatform/melis-platform-framework-laravel-demo-tool": "*"
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/melisplatform/melis-platform-framework-laravel"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/melisplatform/melis-platform-framework-laravel-demo-tool"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
