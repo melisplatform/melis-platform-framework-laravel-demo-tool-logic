@@ -1,6 +1,6 @@
 <h2>Album</h2>
 <table class="table">
-    <tr style=" background: #ea4e49; color: #fff;">
+    <tr style=" background: #ff2d20; color: #fff;">
         <th>ID</th>
         <th>Album Name</th>
         <th>Song Number</th>
@@ -18,7 +18,7 @@
 
 <h2>Melis Core Languages</h2>
 <table class="table">
-    <tr style=" background: #ea4e49; color: #fff;">
+    <tr style=" background: #ff2d20; color: #fff;">
         <th>ID</th>
         <th>Locale</th>
         <th>Name</th>
