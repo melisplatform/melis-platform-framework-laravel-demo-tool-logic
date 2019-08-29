@@ -23,5 +23,10 @@
       "../../../thirdparty/Laravel/database/seeds",
       "../../../thirdparty/Laravel/database/factories"
     ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "../../../thirdparty/Laravel/tests/"
+    }
   }
 }
