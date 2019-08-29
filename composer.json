@@ -16,17 +16,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "App\\": "../../../thirdparty/Laravel/app",
       "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
-    },
-    "classmap": [
-      "../../../thirdparty/Laravel/database/seeds",
-      "../../../thirdparty/Laravel/database/factories"
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "../../../thirdparty/Laravel/tests/"
     }
   }
 }
