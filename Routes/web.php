@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/list', 'IndexController@list');
+/**
+ * /melis route for BO access
+ */
+Route::get('/melis/list', 'IndexController@list');
