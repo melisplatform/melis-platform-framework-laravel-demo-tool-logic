@@ -21,6 +21,7 @@
   },
   "autoload": {
     "psr-4": {
+      "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/",
       "App\\": "../../../thirdparty/Laravel/app"
     },
     "classmap": [
@@ -31,11 +32,6 @@
   "autoload-dev": {
     "psr-4": {
       "Tests\\": "./../../thirdparty/Laravel/tests/"
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
     }
   }
 }
