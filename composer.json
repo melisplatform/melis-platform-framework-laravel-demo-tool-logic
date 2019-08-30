@@ -16,8 +16,8 @@
     "laravel"
   ],
   "require": {
-    "melisplatform/melis-platform-framework-laravel": "*",
-    "melisplatform/melis-platform-framework-laravel-demo-tool": "*"
+    "melisplatform/melis-platform-framework-laravel": "dev-master",
+    "melisplatform/melis-platform-framework-laravel-demo-tool": "dev-master"
   },
   "require-dev": {
     "beyondcode/laravel-dump-server": "^1.0",
