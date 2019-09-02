@@ -30,5 +30,5 @@
       "../../../thirdparty/Laravel/database/seeds",
       "../../../thirdparty/Laravel/database/factories"
     ]
-  },
+  }
 }
