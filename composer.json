@@ -22,7 +22,7 @@
   "autoload": {
     "psr-4": {
       "App\\": [
-        "../../../thirdparty/Laravel/app",
+        "../../../thirdparty/Laravel/app"
       ],
       "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
     },
