@@ -19,13 +19,13 @@ class IndexController extends Controller
         /**
          * Fetching datas from Database using Laravel database query builder
          */
-        $albums = $users = DB::table('melis_demo_album')->get();
+        $albums = DB::table('melis_demo_album')->get();
 
         /**
          * And this retrieving datas using Zend service manager
          */
         $languages = app('ZendServiceManager')->get('MelisCoreTableLang')->fetchAll();
 
-        return view('melisplatformframeworklaraveldemotoollogic::list', ['albums' => $albums, 'langs' => $languages]);
+        return view('laravelDemoTool::list', ['albums' => $albums, 'langs' => $languages]);
     }
 }

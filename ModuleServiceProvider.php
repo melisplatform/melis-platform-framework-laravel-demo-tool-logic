@@ -13,6 +13,7 @@ class ModuleServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerViews();
+        $this->registerTranslations();
     }
 
     /**
@@ -30,6 +31,11 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function registerViews()
     {
-        $this->loadViewsFrom(__DIR__.'/Resources/views', 'melisplatformframeworklaraveldemotoollogic');
+        $this->loadViewsFrom(__DIR__.'/Resources/views', 'laravelDemoTool');
+    }
+
+    public function registerTranslations()
+    {
+        $this->loadTranslationsFrom(__DIR__.'/Resources/lang', 'laravelDemoTool');
     }
 }
