@@ -1,4 +1,8 @@
 <h2>Album</h2>
+<p>This list of data created from simple Laravel Query Builder in <span class="text-danger">Http/Controllers/IndexController.php</span> using with the same Database connection of Melis Platform.</p>
+<pre>
+    $albums = DB::table('melis_demo_album')->get();
+</pre>
 <table class="table">
     <tr style=" background: #ff2d20; color: #fff;">
         <th>ID</th>
@@ -17,6 +21,10 @@
 </table>
 
 <h2>Melis Core Languages</h2>
+<p>And this list of data is created using <b>Zend Service Manager</b> that provides a services, this service provide a table gateway or a databse connection to fetch rows of data</p>
+<pre>
+    $languages = app('ZendServiceManager')->get('MelisCoreTableLang')->fetchAll();
+</pre>
 <table class="table">
     <tr style=" background: #ff2d20; color: #fff;">
         <th>ID</th>
