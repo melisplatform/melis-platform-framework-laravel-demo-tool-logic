@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'title' => 'Un embryon d\'outil fait en Laravel',
+    'desc' => 'Cet outil de demo a pour but de montrer comment utiliser le framework Laravel à l\'intérieur de Melis Platform, et ne pas être bloqué en ZF',
+
     'album' => 'Album',
     'album_message' => 'Le tableau ci-dessous affiche les données extraites de la base de données en utilisant Laravel.',
 	'id' => 'ID',
