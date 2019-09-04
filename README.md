@@ -19,7 +19,7 @@ composer require melisplatform/melis-platform-framework-laravel-demo-tool-logic
 ### Route
 This module handles a single route. See ``Routes/web.php``
 ```
-Route::get('/melis/list', 'IndexController@list');
+Route::get('/melis/laravel-list', 'IndexController@list');
 ```
 
 ## Authors
