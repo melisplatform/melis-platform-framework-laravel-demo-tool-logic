@@ -16,8 +16,8 @@
     "laravel"
   ],
   "require": {
-    "melisplatform/melis-platform-framework-laravel": "dev-master",
-    "melisplatform/melis-platform-framework-laravel-demo-tool": "dev-master"
+    "melisplatform/melis-platform-framework-laravel": "^3.1",
+    "melisplatform/melis-platform-framework-laravel-demo-tool": "^3.1"
   },
   "autoload": {
     "psr-4": {
