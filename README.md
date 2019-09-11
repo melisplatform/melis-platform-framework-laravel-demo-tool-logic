@@ -12,6 +12,20 @@ The requirements for this module are:
 It will automatically be done when using composer.
 
 ### Installing
+Before installing this package, this required to create first the **Laravel** skeleton in ``/thirdparty/Laravel``,
+then let Composer class mapping to be added to the autoloader, otherwise composer will interrupted 
+an error message on your command line and stop the current execution.
+```
+"autoload": {
+    ...
+    "classmap": [
+      "../../../thirdparty/Laravel/database/seeds",
+      "../../../thirdparty/Laravel/database/factories"
+    ]
+  }
+```
+Once it done, you can now run the following composer command:
+   
 ```
 composer require melisplatform/melis-platform-framework-laravel-demo-tool-logic
 ```
