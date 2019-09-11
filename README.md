@@ -29,6 +29,12 @@ Once it done, you can now run the following composer command:
 ```
 composer require melisplatform/melis-platform-framework-laravel-demo-tool-logic
 ```
+### Service Providers
+Activating the Service provider by just adding to the ``config/app.php`` file in the 
+Service Providers section.
+```
+MelisPlatformFrameworkLaravelDemoToolLogic\ModuleServiceProvider::class
+```
 
 ### Route
 This module handles a single route. See ``Routes/web.php``
