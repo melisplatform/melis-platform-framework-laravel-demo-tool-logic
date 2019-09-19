@@ -25,10 +25,6 @@
         "../../../thirdparty/Laravel/app"
       ],
       "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
-    },
-    "classmap": [
-      "../../../thirdparty/Laravel/database/seeds",
-      "../../../thirdparty/Laravel/database/factories"
-    ]
+    }
   }
 }
