@@ -15,3 +15,7 @@
  * /melis route for BO access
  */
 Route::get('/melis/laravel-list', 'IndexController@list');
+/**
+ * /melis route for Front access
+ */
+Route::get('/laravel-list', 'IndexController@list2');
