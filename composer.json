@@ -26,5 +26,8 @@
       ],
       "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
     }
+  },
+  "scripts": {
+    "pre-package-install": "@php install/scripts/pre-package-install/scripts.php"
   }
 }
