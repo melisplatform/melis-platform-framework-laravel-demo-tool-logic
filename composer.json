@@ -25,5 +25,8 @@
       ],
       "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
     }
+  },
+  "config": {
+    "optimize-autoloader": true
   }
 }
