@@ -14,8 +14,16 @@
 /**
  * /melis route for BO access
  */
-Route::get('/melis/laravel-list', 'IndexController@list');
+
+Route::group(['prefix'=>'melis'], function(){
+    // Tool content
+    Route::get('laravel-list', 'IndexController@list');
+    // Album form for Modal create and update
+    Route::get('laravel-album-form/{id?}', 'IndexController@albumForm');
+});
+
 /**
  * /melis route for Front access
  */
 Route::get('/laravel-list', 'IndexController@list2');
+

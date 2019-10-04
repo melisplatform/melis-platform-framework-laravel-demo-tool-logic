@@ -44,4 +44,10 @@ class IndexController extends Controller
 
         return view('laravelDemoTool::list2', ['albums' => $albums]);
     }
+
+    public function albumForm($id = null)
+    {
+
+        return view('laravelDemoTool::album-form', ['albumId' => $id]);
+    }
 }

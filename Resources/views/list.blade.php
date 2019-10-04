@@ -4,6 +4,9 @@
             <h1 class="content-heading">{{ __('laravelDemoTool::messages.title') }}</h1>
             <p>{{ __('laravelDemoTool::messages.desc') }}</p>
         </div>
+        <div class="me-hl col-xs-4 col-sm-4 col-md-4">
+            <button class="btn btn-success pull-right btn-add-new-album">New album</button>
+        </div>
     </div>
 </div>
 <div class="innerAll spacing-x2">

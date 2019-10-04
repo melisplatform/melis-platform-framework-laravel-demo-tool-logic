@@ -4,6 +4,9 @@ namespace MelisPlatformFrameworkLaravelDemoToolLogic;
 
 use Illuminate\Support\ServiceProvider;
 use MelisPlatformFrameworkLaravelDemoToolLogic\Providers\RouteServiceProvider;
+use Collective\Html\HtmlServiceProvider;
+use Collective\Html\FormFacade As Form;
+use Collective\Html\HtmlFacade;
 
 class ModuleServiceProvider extends ServiceProvider
 {
@@ -14,6 +17,8 @@ class ModuleServiceProvider extends ServiceProvider
     {
         $this->registerViews();
         $this->registerTranslations();
+
+        Form::component('bsText', 'laravelDemoTool::text', ['name', 'label' => null, 'value' => null, 'attributes' => []]);
     }
 
     /**
@@ -22,6 +27,11 @@ class ModuleServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+        $this->app->register(HtmlServiceProvider::class);
+
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Form', Form::class);
+        $loader->alias('Html', HtmlFacade::class);
     }
 
     /**
