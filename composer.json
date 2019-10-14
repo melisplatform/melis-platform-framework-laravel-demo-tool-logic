@@ -16,7 +16,7 @@
     "laravel"
   ],
   "require": {
-    "melisplatform/melis-platform-framework-laravel": "*"
+    "melisplatform/melis-platform-framework-laravel-demo-tool": "*"
   },
   "autoload": {
     "psr-4": {
