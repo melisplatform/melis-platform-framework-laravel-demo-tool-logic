@@ -6,15 +6,28 @@ return [
 
     'album' => 'Album',
     'album_message' => 'Le tableau ci-dessous affiche les données extraites de la base de données en utilisant Laravel.',
-	'id' => 'ID',
-	'album_name' => 'Nom de l\'album',
-	'songs' => 'Chansons',
-	'date' => 'Date',
+
+	'alb_id_text' => 'ID',
+	'alb_name_text' => 'Nom de l\'album',
+	'alb_song_num_text' => 'Chansons',
+	'alb_date_text' => 'Date',
 
 	'core_lang' => 'Langages Melis Core',
 	'core_lang_message' => 'Le tableau ci-dessous affiche les données extraites des services de Melis Platform en utilisant Laravel.',
+    'id' => 'ID',
 	'locale' => 'Locale',
 	'name' => 'Nom',
+
+    'new_album' => 'Ajouter un album',
+    'title_err_occurred' => 'Album',
+    'message_err_occurred' => 'Impossible de sauvegarder l\'album',
+    'alb_name_required' => 'Nom de l\'album requis',
+    'alb_song_num_required' => 'Nombre de chansons requis',
+    'alb_song_num_integer' => 'Valeur numérique uniquement',
+    'alb_date_required' => 'Date requise',
+    'alb_date_date_format' => 'Format invalide, il doit être (AAAA-MM-JJ)',
+    'delete_title' => 'Supprimer la album',
+    'delete_confirm_message' => 'Etes-vous sûr de vouloir supprimer cette album?',
 ];
 
 

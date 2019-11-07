@@ -3,6 +3,7 @@
 namespace MelisPlatformFrameworkLaravelDemoToolLogic;
 
 use Illuminate\Support\ServiceProvider;
+use MelisPlatformFrameworkLaravelDemoToolLogic\Helper\DataTableHelper;
 use MelisPlatformFrameworkLaravelDemoToolLogic\Providers\RouteServiceProvider;
 use Collective\Html\HtmlServiceProvider;
 use Collective\Html\FormFacade As Form;
@@ -10,17 +11,6 @@ use Collective\Html\HtmlFacade;
 
 class ModuleServiceProvider extends ServiceProvider
 {
-    /**
-     * Booting the package.
-     */
-    public function boot()
-    {
-        $this->registerViews();
-        $this->registerTranslations();
-
-        Form::component('bsText', 'laravelDemoTool::text', ['name', 'label' => null, 'value' => null, 'attributes' => []]);
-    }
-
     /**
      * Register all modules.
      */
@@ -32,6 +22,18 @@ class ModuleServiceProvider extends ServiceProvider
         $loader = \Illuminate\Foundation\AliasLoader::getInstance();
         $loader->alias('Form', Form::class);
         $loader->alias('Html', HtmlFacade::class);
+        $loader->alias('DataTable', DataTableHelper::class);
+    }
+
+    /**
+     * Booting the package.
+     */
+    public function boot()
+    {
+        $this->registerViews();
+        $this->registerTranslations();
+        $this->registerViewHelper();
+        $this->addConfig();
     }
 
     /**
@@ -44,8 +46,32 @@ class ModuleServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/Resources/views', 'laravelDemoTool');
     }
 
+    /**
+     * Register language path
+     */
     public function registerTranslations()
     {
         $this->loadTranslationsFrom(__DIR__.'/Resources/lang', 'laravelDemoTool');
+    }
+
+    /**
+     * Register form view helper
+     */
+    public function registerViewHelper()
+    {
+        Form::component('bsText', 'laravelDemoTool::form.text', ['name', 'label' => null, 'attributes' => [], 'value' => null]);
+
+
+        Form::component('bsText', 'laravelDemoTool::form.text', ['name', 'label' => null, 'attributes' => [], 'value' => null]);
+    }
+
+    /**
+     * Adding custom data to config
+     */
+    public function addConfig()
+    {
+        config([
+            'data-table-config' => require __DIR__ . '/Config/table.config.php'
+        ]);
     }
 }

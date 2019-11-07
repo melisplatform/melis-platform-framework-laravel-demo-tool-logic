@@ -18,12 +18,19 @@
 Route::group(['prefix'=>'melis'], function(){
     // Tool content
     Route::get('laravel-list', 'IndexController@list');
+    Route::post('laravel-get-table-data', 'IndexController@tableData');
+
     // Album form for Modal create and update
     Route::get('laravel-album-form/{id?}', 'IndexController@albumForm');
+
+    Route::post('laravel-save-album/{id?}', 'IndexController@saveAlbum');
+    Route::post('laravel-delete-album/{id}', 'IndexController@deleteAlbum');
+
+
 });
 
 /**
  * /melis route for Front access
  */
-Route::get('/laravel-list', 'IndexController@list2');
+Route::get('/laravel-list', 'IndexController@pluginlist');
 
