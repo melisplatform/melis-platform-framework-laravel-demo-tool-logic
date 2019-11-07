@@ -33,12 +33,12 @@ return [
                 'css' => ['width' => '20%'],
                 'sortable' => true,
             ],
-            'alb_date' => [
+            'alb_song_num' => [
                 'text' => __('laravelDemoTool::messages.alb_song_num_text'),
                 'css' => ['width' => '30%'],
                 'sortable' => true,
             ],
-            'alb_song_num' => [
+            'alb_date' => [
                 'text' => __('laravelDemoTool::messages.alb_date_text'),
                 'css' => ['width' => '30%'],
                 'sortable' => true,
