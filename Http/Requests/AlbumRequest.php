@@ -73,6 +73,6 @@ class AlbumRequest extends FormRequest
             'title' => Lang::get('laravelDemoTool::messages.message_err_occurred'),
         ];
 
-        throw new HttpResponseException(response()->json($jsonResponse, 422));
+        throw new HttpResponseException(response()->json($jsonResponse, 200));
     }
 }
