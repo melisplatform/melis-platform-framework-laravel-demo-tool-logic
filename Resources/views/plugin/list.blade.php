@@ -1,7 +1,7 @@
 <div class="innerAll spacing-x2">
     <h2>{{ __('laravelDemoTool::messages.album') }}</h2>
     <p>{!! __('laravelDemoTool::messages.album_message') !!}</p>
-    <pre>$albums = DB::table('melis_demo_album')->get();</pre>
+    <pre>$albums = Album::all();</pre>
     <table class="table">
         <tr style=" background: #ff2d20; color: #fff;">
             <th>{{ __('laravelDemoTool::messages.id') }}</th>

@@ -24,8 +24,6 @@ return [
     'alb_name_required' => 'Album name is required',
     'alb_song_num_required' => 'The number of songs is required',
     'alb_song_num_integer' => 'Numerical value only',
-    'alb_date_required' => 'Date is required',
-    'alb_date_date_format' => 'Date format invalid, must be (YYYY-MM-DD)',
     'delete_title' => 'Delete album',
     'delete_confirm_message' => 'Are you sure you want to delete this album?',
 ];

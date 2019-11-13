@@ -24,7 +24,6 @@
                                 {{ Form::bsText('alb_id', __('laravelDemoTool::messages.alb_id_text'), ['disabled' => true]) }}
                                 {{ Form::bsText('alb_name', __('laravelDemoTool::messages.alb_name_text')) }}
                                 {{ Form::bsText('alb_song_num', __('laravelDemoTool::messages.alb_song_num_text')) }}
-                                {{ Form::bsText('alb_date', __('laravelDemoTool::messages.alb_date_text')) }}
 
                                 {!! Form::close() !!}
                             </div>

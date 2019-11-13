@@ -28,7 +28,6 @@ class AlbumRequest extends FormRequest
         return [
             'alb_name' => 'required',
             'alb_song_num' => 'required|integer',
-            'alb_date' => 'required|date_format:Y-m-d',
         ];
     }
 
@@ -43,8 +42,6 @@ class AlbumRequest extends FormRequest
             'alb_name.required' => Lang::get('laravelDemoTool::messages.alb_name_required'),
             'alb_song_num.required' => Lang::get('laravelDemoTool::messages.alb_song_num_required'),
             'alb_song_num.integer' => Lang::get('laravelDemoTool::messages.alb_song_num_integer'),
-            'alb_date.required' => Lang::get('laravelDemoTool::messages.alb_date_required'),
-            'alb_date.date_format' => Lang::get('laravelDemoTool::messages.alb_date_date_format'),
         ];
     }
 
