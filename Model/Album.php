@@ -47,12 +47,4 @@ class Album extends Model
      * @var array
      */
     protected $fillable = ['alb_name', 'alb_date', 'alb_song_num'];
-
-
-
-
-//    public function getCreatedAtAttribute($date)
-//    {
-//        return Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d');
-//    }
 }
