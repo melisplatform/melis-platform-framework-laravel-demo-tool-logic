@@ -133,12 +133,13 @@ class IndexController extends Controller
 
         // Save action to logs
         $logType = (!$albumId) ? Album::ADD : Album::UPDATE;
-        $album->logAction(true,
-            Lang::get('laravelDemoTool::messages.album'),
-            Lang::get('laravelDemoTool::messages.'.strtolower($logType).'_success'),
-            $logType, $album->alb_id);
 
-        return response()->json(['success' => 1]);
+        $title = Lang::get('laravelDemoTool::messages.album');
+        $message = Lang::get('laravelDemoTool::messages.'.strtolower($logType).'_success');
+
+        $album->logAction(true, $title, $message, $logType, $album->alb_id);
+
+        return response()->json(['success' => 1, 'title' => $title, 'message' => $message]);
     }
 
     /**
@@ -152,12 +153,12 @@ class IndexController extends Controller
         $album = Album::find($albumId);
         $album->delete();
 
-        // Save delete action to logs
-        $album->logAction(true,
-            Lang::get('laravelDemoTool::messages.album'),
-            Lang::get('laravelDemoTool::messages.delete_success'),
-            Album::ADD, $albumId);
+        $title = Lang::get('laravelDemoTool::messages.album');
+        $message = Lang::get('laravelDemoTool::messages.delete_success');
 
-        return response()->json(['success' => 1]);
+        // Save delete action to logs
+        $album->logAction(true, $title, $message, Album::ADD, $albumId);
+
+        return response()->json(['success' => 1, 'title' => $title, 'message' => $message]);
     }
 }
