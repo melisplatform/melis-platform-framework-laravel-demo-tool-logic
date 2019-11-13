@@ -19,8 +19,13 @@ return [
 	'name' => 'Nom',
 
     'new_album' => 'Ajouter un album',
-    'title_err_occurred' => 'Album',
-    'message_err_occurred' => 'Impossible de sauvegarder l\'album',
+
+    'add_success' => 'Album sauvegardé avec succès',
+    'update_success' => 'Album mis à jour avec succès',
+    'add_failed' => 'Impossible de sauvegarder l\'album',
+    'update_failed' => 'Impossible de mettre à jour l\'album',
+    'delete_success' => 'Album supprimé avec succès',
+
     'alb_name_required' => 'Nom de l\'album requis',
     'alb_song_num_required' => 'Nombre de chansons requis',
     'alb_song_num_integer' => 'Valeur numérique uniquement',

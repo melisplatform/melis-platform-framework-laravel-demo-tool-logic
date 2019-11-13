@@ -47,4 +47,34 @@ class Album extends Model
      * @var array
      */
     protected $fillable = ['alb_name', 'alb_song_num'];
+
+    /**
+     * Action log types
+     */
+    const ADD = 'Add';
+    const UPDATE = 'UPDATE';
+    const DELETE= 'DELETE';
+
+    /**
+     * Saving action to logs using Melis Core Service
+     *
+     * @param $result
+     * @param $title
+     * @param $message
+     * @param $logType
+     * @param $itemId
+     */
+    public function logAction($result, $title, $message, $logType, $itemId)
+    {
+        $flashMessenger = app('ZendServiceManager')->get('MelisCoreFlashMessenger');
+
+        $icon = ($result) ? $flashMessenger::WARNING:  $flashMessenger::INFO;
+
+        $logType = 'MELIS_PLATFORM_FRAMEWORK_LARAVEL_'.$logType;
+
+        $flashMessenger->addToFlashMessenger($title, 'Album have been successfully saved', $icon);
+
+        $logSrv = app('ZendServiceManager')->get('MelisCoreLogService');
+        $logSrv->saveLog($title, $message, $result, $logType, $itemId);
+    }
 }

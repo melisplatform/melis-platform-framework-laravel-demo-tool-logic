@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller;
 use MelisPlatformFrameworkLaravelDemoToolLogic\Http\Requests\AlbumRequest;
 use MelisPlatformFrameworkLaravelDemoToolLogic\Model\Album;
 use Illuminate\Http\Request;
+use Lang;
 
 class IndexController extends Controller
 {
@@ -130,6 +131,13 @@ class IndexController extends Controller
         // Save
         $album->save();
 
+        // Save action to logs
+        $logType = (!$albumId) ? Album::ADD : Album::UPDATE;
+        $album->logAction(true,
+            Lang::get('laravelDemoTool::messages.album'),
+            Lang::get('laravelDemoTool::messages.'.strtolower($logType).'_success'),
+            $logType, $album->alb_id);
+
         return response()->json(['success' => 1]);
     }
 
@@ -143,6 +151,13 @@ class IndexController extends Controller
     {
         $album = Album::find($albumId);
         $album->delete();
+
+        // Save delete action to logs
+        $album->logAction(true,
+            Lang::get('laravelDemoTool::messages.album'),
+            Lang::get('laravelDemoTool::messages.delete_success'),
+            Album::ADD, $albumId);
+
         return response()->json(['success' => 1]);
     }
 }

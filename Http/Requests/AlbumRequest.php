@@ -5,6 +5,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
 use Lang;
+use MelisPlatformFrameworkLaravelDemoToolLogic\Model\Album;
 
 class AlbumRequest extends FormRequest
 {
@@ -66,11 +67,22 @@ class AlbumRequest extends FormRequest
                 $errors[$key]['err_'.++$ek] = $er;
         }
 
+        // Save action to logs
+        $albumId = request()->route('id') ?? null;
+        $logType = (!$albumId) ? Album::ADD : Album::UPDATE;
+
+        $title = Lang::get('laravelDemoTool::messages.album');
+        $message = Lang::get('laravelDemoTool::messages.'.strtolower($logType).'_failed');
+
+        // Album Model
+        $album = new Album();
+        $album->logAction(false, $title, $message, $logType, $albumId);
+
         $jsonResponse = [
             'success' => 0, // Flag trigger on front side that error occurred
             'errors' => $errors,
-            'message' => Lang::get('laravelDemoTool::messages.title_err_occurred'),
-            'title' => Lang::get('laravelDemoTool::messages.message_err_occurred'),
+            'title' => $title,
+            'message' => $message,
         ];
 
         throw new HttpResponseException(response()->json($jsonResponse, 200));

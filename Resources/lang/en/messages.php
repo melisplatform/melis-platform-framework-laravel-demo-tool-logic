@@ -19,8 +19,13 @@ return [
 	'name' => 'Name',
 
     'new_album' => 'Add album',
-    'title_err_occurred' => 'Album',
-    'message_err_occurred' => 'Unable to save the album',
+
+    'add_success' => 'Album successfully saved',
+    'update_success' => 'Album successfully updated',
+    'add_failed' => 'Unable to save the album',
+    'update_failed' => 'Unable to update the album',
+    'delete_success' => 'Album successfully deleted',
+
     'alb_name_required' => 'Album name is required',
     'alb_song_num_required' => 'The number of songs is required',
     'alb_song_num_integer' => 'Numerical value only',
