@@ -4,10 +4,10 @@
     <pre>$albums = Album::all();</pre>
     <table class="table">
         <tr style=" background: #ff2d20; color: #fff;">
-            <th>{{ __('laravelDemoTool::messages.id') }}</th>
-            <th>{{ __('laravelDemoTool::messages.album_name') }}</th>
-            <th>{{ __('laravelDemoTool::messages.songs') }}</th>
-            <th>{{ __('laravelDemoTool::messages.date') }}</th>
+            <th>{{ __('laravelDemoTool::messages.alb_id_text') }}</th>
+            <th>{{ __('laravelDemoTool::messages.alb_name_text') }}</th>
+            <th>{{ __('laravelDemoTool::messages.alb_song_num_text') }}</th>
+            <th>{{ __('laravelDemoTool::messages.alb_date_text') }}</th>
         </tr>
         @foreach($albums As $album)
             <tr>
