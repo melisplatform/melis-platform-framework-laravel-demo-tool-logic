@@ -68,11 +68,11 @@ class Album extends Model
     {
         $flashMessenger = app('ZendServiceManager')->get('MelisCoreFlashMessenger');
 
-        $icon = ($result) ? $flashMessenger::WARNING:  $flashMessenger::INFO;
+        $icon = ($result) ? $flashMessenger::INFO:  $flashMessenger::WARNING;
 
         $logType = 'MELIS_PLATFORM_FRAMEWORK_LARAVEL_'.$logType;
 
-        $flashMessenger->addToFlashMessenger($title, 'Album have been successfully saved', $icon);
+        $flashMessenger->addToFlashMessenger($title, $message, $icon);
 
         $logSrv = app('ZendServiceManager')->get('MelisCoreLogService');
         $logSrv->saveLog($title, $message, $result, $logType, $itemId);

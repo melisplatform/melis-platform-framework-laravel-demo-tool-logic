@@ -157,7 +157,7 @@ class IndexController extends Controller
         $message = Lang::get('laravelDemoTool::messages.delete_success');
 
         // Save delete action to logs
-        $album->logAction(true, $title, $message, Album::ADD, $albumId);
+        $album->logAction(true, $title, $message, Album::DELETE, $albumId);
 
         return response()->json(['success' => 1, 'title' => $title, 'message' => $message]);
     }
