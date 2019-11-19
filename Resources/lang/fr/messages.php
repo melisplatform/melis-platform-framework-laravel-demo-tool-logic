@@ -12,6 +12,9 @@ return [
 	'alb_song_num_text' => 'Chansons',
 	'alb_date_text' => 'Date',
 
+    'alb_name_text tooltip' => 'Nom de l\'album',
+    'alb_song_num_text tooltip' => 'Nombre de chansons',
+
 	'core_lang' => 'Langages Melis Core',
 	'core_lang_message' => 'Le tableau ci-dessous affiche les données extraites des services de Melis Platform en utilisant Laravel.',
     'id' => 'ID',

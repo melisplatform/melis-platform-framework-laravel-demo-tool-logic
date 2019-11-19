@@ -59,10 +59,7 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function registerViewHelper()
     {
-        Form::component('bsText', 'laravelDemoTool::form.text', ['name', 'label' => null, 'attributes' => [], 'value' => null]);
-
-
-        Form::component('bsText', 'laravelDemoTool::form.text', ['name', 'label' => null, 'attributes' => [], 'value' => null]);
+        Form::component('bsText', 'laravelDemoTool::form.text', ['name', 'label' => null, 'tooltip' => null, 'attributes' => [], 'value' => null]);
     }
 
     /**
