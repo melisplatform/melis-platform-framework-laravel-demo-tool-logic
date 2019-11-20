@@ -17,17 +17,10 @@
   ],
   "require": {
     "melisplatform/melis-platform-framework-laravel": "*",
-    "laravelcollective/html":"^6.0"
   },
   "autoload": {
     "psr-4": {
-      "App\\": [
-        "../../../thirdparty/Laravel/app"
-      ],
       "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
     }
-  },
-  "scripts": {
-    "pre-package-install": "@php install/scripts/pre-package-install/scripts.php"
   }
 }
