@@ -20,13 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": [
-        "../../../thirdparty/Laravel/app"
-      ],
       "MelisPlatformFrameworkLaravelDemoToolLogic\\": "/"
     }
-  },
-  "config": {
-    "optimize-autoloader": true
   }
 }
