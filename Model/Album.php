@@ -39,7 +39,7 @@ class Album extends Model
      *
      * @var string
      */
-    protected $dateFormat = 'Y-m-d';
+    // protected $dateFormat = 'Y-m-d';
 
     /**
      * The attributes that are mass assignable.
