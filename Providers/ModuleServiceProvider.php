@@ -3,11 +3,8 @@
 namespace MelisPlatformFrameworkLaravelDemoToolLogic\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use MelisPlatformFrameworkLaravelDemoToolLogic\Helper\DataTableHelper;
-use MelisPlatformFrameworkLaravelDemoToolLogic\Providers\RouteServiceProvider;
 use Collective\Html\HtmlServiceProvider;
-use Collective\Html\FormFacade As Form;
-use Collective\Html\HtmlFacade;
+
 
 class ModuleServiceProvider extends ServiceProvider
 {
@@ -18,11 +15,6 @@ class ModuleServiceProvider extends ServiceProvider
     {
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(HtmlServiceProvider::class);
-
-        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-        $loader->alias('Form', Form::class);
-        $loader->alias('Html', HtmlFacade::class);
-        $loader->alias('DataTable', DataTableHelper::class);
     }
 
     /**
@@ -32,7 +24,6 @@ class ModuleServiceProvider extends ServiceProvider
     {
         $this->registerViews();
         $this->registerTranslations();
-        $this->registerViewHelper();
         $this->addConfig();
     }
 
@@ -54,13 +45,6 @@ class ModuleServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'laravelDemoTool');
     }
 
-    /**
-     * Register form view helper
-     */
-    public function registerViewHelper()
-    {
-        Form::component('bsText', 'laravelDemoTool::form.text', ['name', 'label' => null, 'tooltip' => null, 'attributes' => [], 'value' => null]);
-    }
 
     /**
      * Adding custom data to config

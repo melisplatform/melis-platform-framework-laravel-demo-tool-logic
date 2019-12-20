@@ -15,7 +15,7 @@
                     <div class="tab-pane active" id="id-melis-laravel-demo-tool-modal">
                         <div class="row">
                             <div class="col-md-12">
-                                {{! $formAttr = ['action' => 'IndexController@saveAlbum' ,'method' => 'post', 'id' => 'laravel-album-form'] }}
+                                {{! $formAttr = ['url' => 'melis/laravel-save-album/save' ,'method' => 'post', 'id' => 'laravel-album-form'] }}
                                 @if($album)
                                     {{ Form::model($album, $formAttr) }}
                                 @else
