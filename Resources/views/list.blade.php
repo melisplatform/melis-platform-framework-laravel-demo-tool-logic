@@ -1,11 +1,11 @@
 <div class="me-heading bg-white border-bottom">
     <div class="row">
-        <div class="me-hl col-xs-8 col-sm-8 col-md-8">
+        <div class="me-hl col-8 col-sm-8 col-md-8">
             <h1 class="content-heading">{{ __('laravelDemoTool::messages.title') }}</h1>
             <p>{{ __('laravelDemoTool::messages.desc') }}</p>
         </div>
-        <div class="me-hl col-xs-4 col-sm-4 col-md-4">
-            <button class="btn btn-success pull-right btn-add-update-action">{{ __('laravelDemoTool::messages.new_album') }}</button>
+        <div class="me-hl col-4 col-sm-4 col-md-4">
+            <button class="btn btn-success float-right btn-add-update-action">{{ __('laravelDemoTool::messages.new_album') }}</button>
         </div>
     </div>
 </div>
