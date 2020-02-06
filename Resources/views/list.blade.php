@@ -17,18 +17,22 @@
     <h2>{{ __('laravelDemoTool::messages.core_lang') }}</h2>
     <p>{{ __('laravelDemoTool::messages.core_lang_message') }}</p>
     <pre>$languages = app('ZendServiceManager')->get('MelisCoreTableLang')->fetchAll();</pre>
-    <table class="table">
-        <tr style=" background: #ff2d20; color: #fff;">
-            <th>{{ __('laravelDemoTool::messages.id') }}</th>
-            <th>{{ __('laravelDemoTool::messages.locale') }}</th>
-            <th>{{ __('laravelDemoTool::messages.name') }}</th>
-        </tr>
-        @foreach($langs As $lang)
+    <table class="table table-primary table-bordered table-striped">
+        <thead>
             <tr>
-                <td>{{ $lang->lang_id }}</td>
-                <td>{{ $lang->lang_locale }}</td>
-                <td>{{ $lang->lang_name }}</td>
+                <th>{{ __('laravelDemoTool::messages.id') }}</th>
+                <th>{{ __('laravelDemoTool::messages.locale') }}</th>
+                <th>{{ __('laravelDemoTool::messages.name') }}</th>
             </tr>
-        @endforeach
+        </thead>
+        <tbody>
+            @foreach($langs As $lang)
+                <tr>
+                    <td>{{ $lang->lang_id }}</td>
+                    <td>{{ $lang->lang_locale }}</td>
+                    <td>{{ $lang->lang_name }}</td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
 </div>
