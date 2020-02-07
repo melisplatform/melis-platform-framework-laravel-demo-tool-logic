@@ -31,7 +31,7 @@
                     </div>
                     <div class="footer-modal d-flex flex-row justify-content-between">
                         <a data-dismiss="modal" class="btn btn-danger float-left"><i class="fa fa-times"></i> Close</a>
-                        <a class="btn btn-success btn-save-action" {{ $albumId ? 'data-id=' .$albumId : '' }}><i class="fa fa-save"></i>  Save</a>
+                        <a class="btn btn-success btn-save-action" {{ $albumId ? 'data-id="' .$albumId. '"' : '' }}><i class="fa fa-save"></i>  Save</a>
                     </div>
                 </div>
             </div>
