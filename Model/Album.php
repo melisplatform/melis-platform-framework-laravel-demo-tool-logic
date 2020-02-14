@@ -35,13 +35,6 @@ class Album extends Model
     const CREATED_AT =  'alb_date';
 
     /**
-     * The storage format of the model's date columns.
-     *
-     * @var string
-     */
-    protected $dateFormat = 'Y-m-d';
-
-    /**
      * The attributes that are mass assignable.
      *
      * @var array

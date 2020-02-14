@@ -1,6 +1,6 @@
 <?php
 
-namespace MelisPlatformFrameworkLaravelDemoToolLogic\Providers;
+namespace MelisPlatformFrameworkLaravelDemoToolLogic;
 
 use Illuminate\Support\ServiceProvider;
 use Collective\Html\HtmlServiceProvider;
@@ -34,7 +34,7 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function registerViews()
     {
-        $this->loadViewsFrom(__DIR__.'/../Resources/views', 'laravelDemoTool');
+        $this->loadViewsFrom(__DIR__.'/Resources/views', 'laravelDemoTool');
     }
 
     /**
@@ -42,7 +42,7 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function registerTranslations()
     {
-        $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'laravelDemoTool');
+        $this->loadTranslationsFrom(__DIR__.'/Resources/lang', 'laravelDemoTool');
     }
 
 
@@ -52,7 +52,7 @@ class ModuleServiceProvider extends ServiceProvider
     public function addConfig()
     {
         config([
-            'data-table-config' => require __DIR__ . '/../Config/table.config.php'
+            'data-table-config' => require __DIR__ . '/Config/table.config.php'
         ]);
     }
 }
