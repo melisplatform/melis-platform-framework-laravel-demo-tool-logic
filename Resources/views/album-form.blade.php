@@ -15,7 +15,7 @@
                     <div class="tab-pane active" id="id-melis-laravel-demo-tool-modal">
                         <div class="row">
                             <div class="col-md-12">
-                                {{! $formAttr = ['action' => 'IndexController@saveAlbum' ,'method' => 'post', 'id' => 'laravel-album-form'] }}
+                                {{! $formAttr = ['url' => 'melis/laravel-save-album/save' ,'method' => 'post', 'id' => 'laravel-album-form'] }}
                                 @if($album)
                                     {{ Form::model($album, $formAttr) }}
                                 @else
@@ -31,7 +31,7 @@
                     </div>
                     <div class="footer-modal d-flex flex-row justify-content-between">
                         <a data-dismiss="modal" class="btn btn-danger float-left"><i class="fa fa-times"></i> Close</a>
-                        <a class="btn btn-success btn-save-action" {{ $albumId ? 'data-id="' .$albumId. '"' : '' }}><i class="fa fa-save"></i>  Save</a>
+                        <a class="btn btn-success btn-save-action" {{ $albumId ? 'data-id=' .$albumId. '' : '' }}><i class="fa fa-save"></i>  Save</a>
                     </div>
                 </div>
             </div>
