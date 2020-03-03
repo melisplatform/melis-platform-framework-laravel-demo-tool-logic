@@ -110,7 +110,7 @@ class IndexController extends Controller
     /**
      * Store data submitted to Album
      *
-     * @param AlbumRequest $request
+     * @param CalendarRequest $request
      * @param null $albumId
      * @return \Illuminate\Http\JsonResponse
      */

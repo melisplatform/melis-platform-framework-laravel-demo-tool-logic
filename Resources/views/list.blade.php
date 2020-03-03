@@ -17,7 +17,7 @@
     <h2>{{ __('laravelDemoTool::messages.core_lang') }}</h2>
     <p>{{ __('laravelDemoTool::messages.core_lang_message') }}</p>
     <pre>$languages = app('ZendServiceManager')->get('MelisCoreTableLang')->fetchAll();</pre>
-    <table class="table table-primary table-bordered table-striped">
+    <table class="table table-striped table-primary">
         <thead>
             <tr>
                 <th>{{ __('laravelDemoTool::messages.id') }}</th>

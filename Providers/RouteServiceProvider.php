@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'MelisPlatformFrameworkLaravelDemoToolLogic\Http\Controllers';
+    protected $moduleNamespace = 'MelisPlatformFrameworkLaravelDemoToolLogic\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -46,7 +46,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
+             ->namespace($this->moduleNamespace)
              ->group(__DIR__.'/../Routes/web.php');
     }
 }
