@@ -3,8 +3,6 @@
 namespace MelisPlatformFrameworkLaravelDemoToolLogic\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Collective\Html\HtmlServiceProvider;
-
 
 class ModuleServiceProvider extends ServiceProvider
 {
@@ -14,7 +12,6 @@ class ModuleServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
-        $this->app->register(HtmlServiceProvider::class);
     }
 
     /**
