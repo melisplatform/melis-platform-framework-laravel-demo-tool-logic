@@ -14,7 +14,7 @@ class IndexController extends Controller
     /**
      * Display a listing
      * This is an example retrieving data from database
-     * using Laravel database query builder and Zend service manager
+     * using Laravel database query builder and Laminas Service Manager
      * @return Response
      */
     public function list()
@@ -22,9 +22,9 @@ class IndexController extends Controller
         $dataTableConfig = config('data-table-config.table');
 
         /**
-         * And this retrieving datas using Zend service manager
+         * And this retrieving datas using Laminas Service Manager
          */
-        $languages = app('ZendServiceManager')->get('MelisCoreTableLang')->fetchAll();
+        $languages = app('LaminasServiceManager')->get('MelisCoreTableLang')->fetchAll();
 
         return view('laravelDemoTool::list', ['langs' => $languages, 'dataTableConfig' => $dataTableConfig]);
     }
@@ -73,7 +73,7 @@ class IndexController extends Controller
     /**
      * Display a listing
      * This is an example retrieving data from database
-     * using Laravel database query builder and Zend service manager
+     * using Laravel database query builder and Laminas Service Manager
      * @return Response
      */
     public function pluginlist()

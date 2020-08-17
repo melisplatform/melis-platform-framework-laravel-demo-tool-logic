@@ -1,8 +1,8 @@
 # melis-platform-framework-laravel-demo-tool-logic
 
 Laravel module handling the request of ``melisplatform/melis-platform-framework-laravel-demo-tool``
-to display the list of data using a Database query with the Zend Database connection configuration 
-and the Zend Service manager
+to display the list of data using a Database query with the Laminas Database connection configuration 
+and the Laminas Service manager
 
 ### Prerequisites
 The requirements for this module are:

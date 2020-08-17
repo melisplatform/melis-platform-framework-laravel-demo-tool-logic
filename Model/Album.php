@@ -59,7 +59,7 @@ class Album extends Model
      */
     public function logAction($result, $title, $message, $logType, $itemId)
     {
-        $flashMessenger = app('ZendServiceManager')->get('MelisCoreFlashMessenger');
+        $flashMessenger = app('LaminasServiceManager')->get('MelisCoreFlashMessenger');
 
         $icon = ($result) ? $flashMessenger::INFO:  $flashMessenger::WARNING;
 
@@ -67,7 +67,7 @@ class Album extends Model
 
         $flashMessenger->addToFlashMessenger($title, $message, $icon);
 
-        $logSrv = app('ZendServiceManager')->get('MelisCoreLogService');
+        $logSrv = app('LaminasServiceManager')->get('MelisCoreLogService');
         $logSrv->saveLog($title, $message, $result, $logType, $itemId);
     }
 }
