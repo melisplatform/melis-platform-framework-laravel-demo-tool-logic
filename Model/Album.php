@@ -41,6 +41,10 @@ class Album extends Model
      */
     protected $fillable = ['alb_name', 'alb_song_num'];
 
+    /*format album date*/
+    protected $casts = [
+        'alb_date' => 'datetime:Y-m-d H:i:s'
+    ];
     /**
      * Action log types
      */
