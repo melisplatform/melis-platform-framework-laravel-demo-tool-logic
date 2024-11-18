@@ -4,7 +4,7 @@
             <div class="widget-head">
                 <ul class="nav nav-tabs">
                     <li class="active">
-                        <a href="#id-melis-laravel-demo-tool-modal" class="glyphicons {{ $albumId ? 'pencil' : 'plus' }}" data-toggle="tab" aria-expanded="true"><i></i>
+                        <a href="#id-melis-laravel-demo-tool-modal" class="glyphicons {{ $albumId ? 'pencil' : 'plus' }}" data-bs-toggle="tab" aria-expanded="true"><i></i>
                             {{ __('laravelDemoTool::messages.album')  }}
                         </a>
                     </li>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="footer-modal d-flex flex-row justify-content-between">
-                        <a data-dismiss="modal" class="btn btn-danger float-left"><i class="fa fa-times"></i> Close</a>
+                        <a data-bs-dismiss="modal" class="btn btn-danger float-left"><i class="fa fa-times"></i> Close</a>
                         <a class="btn btn-success btn-save-action" {{ $albumId ? 'data-id=' .$albumId. '' : '' }}><i class="fa fa-save"></i>  Save</a>
                     </div>
                 </div>

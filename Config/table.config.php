@@ -19,7 +19,7 @@ return [
                 'search' => "f"
             ],
             'right' => [
-                'refresh' => '<div class="laravel-table-refresh"><a class="btn btn-default melis-laravel-refresh" data-toggle="tab" aria-expanded="true" ><i class="fa fa-refresh"></i></a></div>'
+                'refresh' => '<div class="laravel-table-refresh"><a class="btn btn-default melis-laravel-refresh" aria-expanded="true" ><i class="fa fa-refresh"></i></a></div>'
             ],
         ],
         'columns' => [
